@@ -623,3 +623,28 @@ a.back {
     cursor: pointer;
     margin: 40px auto;
 }
+
+
+.add-btn2{
+    width: 92%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%,0);
+    opacity: 0;
+    transition-property: opacity, bottom;
+    transition-duration: .3s;
+    bottom: 15px;
+    opacity: 100;
+}
+
+
+.black-color {
+    color:black;
+    }
