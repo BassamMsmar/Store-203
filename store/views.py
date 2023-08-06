@@ -62,16 +62,19 @@ def product_delete(request, pk):
 class CreateCategory(CreateView):
     model = Category
     fields = ['image', 'name']
+    success_url = '/products'
 
 class CreateSubCategory(CreateView):
     model = SubCategory
     fields = ['category', 'name']
+    success_url = '/products'
 
 
 
 class CreateBrand(CreateView):
     model = Brand
     fields = ['name']
+    success_url = '/products'
 
 
 
