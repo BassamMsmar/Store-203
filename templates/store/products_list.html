@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}All products{% endblock %}
+
+{% block content %}
+
+<section id="featured-products">
+    <a href="{% url 'add_product' %}" class="add-btn2">Add Product</a>
+    <a href="{% url 'CreateBrand' %}" class="add-btn2">Add Brand</a>
+    <a href="{% url 'CreateCategory' %}" class="add-btn2">Add Category</a>
+    {% for product in products_list %}
+    <div class="products-wrapper clearfix">
+        <div class="product">
+            <div class="product-img">
+                <img src="{{product.image.url}}" alt="">
+                <a href="{% url 'product_details' product.pk %}" class="details-btn">Details</a>
+            </div>
+            <div class="product-description">
+                <div class="product-brand">{{ product.brand }}</div>
+                <a class="product-name" href="#">{{product.name}}</a>
+                <div class="product-price">${{ product.price }}</div>
+            </div>
+            <div class="d-inline bg-body border-0" >
+                <a href="{% url 'edit_product' product.pk %}"><i class='far fa-edit black-color'></i></a>
+                <a href="{% url 'product_delete' product.pk %}"><i class="fa-regular fa-trash-can black-color"></i></a>
+                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock %}
