@@ -59,11 +59,7 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
         'DIRS': [os.path.join(BASE_DIR, 'templates')],
-=======
-        'DIRS': [os.path.join(BASE_DIR, 'template')],
->>>>>>> 58893b5 (fix error template not exit)
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

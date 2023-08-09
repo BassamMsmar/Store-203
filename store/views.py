@@ -62,28 +62,19 @@ def product_delete(request, pk):
 class CreateCategory(CreateView):
     model = Category
     fields = ['image', 'name']
-<<<<<<< HEAD
     success_url = '/products'
-=======
->>>>>>> 58893b5 (fix error template not exit)
 
 class CreateSubCategory(CreateView):
     model = SubCategory
     fields = ['category', 'name']
-<<<<<<< HEAD
     success_url = '/products'
-=======
->>>>>>> 58893b5 (fix error template not exit)
 
 
 
 class CreateBrand(CreateView):
     model = Brand
     fields = ['name']
-<<<<<<< HEAD
     success_url = '/products'
-=======
->>>>>>> 58893b5 (fix error template not exit)
 
 
 
