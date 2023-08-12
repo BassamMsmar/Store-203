@@ -19,8 +19,13 @@
         <!--HEADER-->
         <header>
             <div>
+                {% if user.is_authenticated %}
+                 Hi {{ user.username }} | <a href="{% url 'logout' %}" class="add-btn2">Logout</a>
+                {% else %}
                 <a href="{% url 'signup' %}" class="add-btn2">Sign Up</a>
-                <a href="{% url 'signup' %}" class="add-btn2">login</a>
+                <a href="{% url 'login' %}" class="add-btn2">login</a>
+                {% endif %}
+                
             </div>
 
             <h1 id="logo">
