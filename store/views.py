@@ -1,14 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import CreateView
+from accounts.utils import send_confirmation_email
 
 
 from .models import Product, Brand, SubCategory, Category
 from .forms import ProductForm
-
-# Create your views here.
-# def index(request):
-    
-#     return render(request, 'base.html')
 
 
 def products(request):
@@ -25,12 +21,14 @@ def product_details(request, pk):
 
 def add_product(request):
     if request.user.is_authenticated and request.user.is_superuser:
+
         if request.method == 'POST':
+    
             form = ProductForm(request.POST, request.FILES)
 
             if form.is_valid():
                 form.save()
-                return redirect('login')
+                return redirect('products')
 
         else:
             form = ProductForm()
