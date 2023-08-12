@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'normalize.css' %}"/>
-    <link rel="stylesheet" href="{% static 'style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
     <link href="https://fonts.googleapis.com/css?family=Questrial|Domine" rel="stylesheet" />
     <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
@@ -18,6 +18,11 @@
     <div class="wrapper">
         <!--HEADER-->
         <header>
+            <div>
+                <a href="{% url 'signup' %}" class="add-btn2">Sign Up</a>
+                <a href="{% url 'signup' %}" class="add-btn2">login</a>
+            </div>
+
             <h1 id="logo">
                 <a href="{% url 'products' %}">STORE</a>
             </h1>
@@ -35,7 +40,7 @@
         <!--MAIN-->
         <main>
             {% block content %}
-            
+
             {% endblock %}
 
         </main>
@@ -61,4 +66,5 @@
 </body>
 
 </html>y>
+
 </html>
